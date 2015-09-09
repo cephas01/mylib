@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript">
+function java(r){
+    var x = document.getElementById("X").value;
+ var y = document.getElementById("Y").value;
+ 
+         
+       if(isNaN(x) || isNaN(y)){
+     document.getElementById("answer").innerHTML = "Enter figures into X and Y!";
+ }
+else if(x.length === 0 || y.length === 0){
+    document.getElementById("answer").innerHTML = "Empty field!";
+}else{
+    if(r === '1'){
+        result = x+y;
+    } 
+    if( r === '2'){
+        result = x-y;
+    }
+    if(r=== '3'){
+        result = x*y;
+    }
+    if( r === '4'){
+        result = x/y;
+    }
+            document.getElementById("answer").innerHTML = "The answer is "+" "+ result;
+            
+}
+}
+</script>
+</head>
+<body>
+<center>
+        <p><b>A simple javascript calculator</b></p>
+        <P>  x:<input type="text" id="X"/><br><br>
+            y:<input type="text" id="Y" /><br><br>
+            <button id="btn1"  onclick="java('1')">add </button>
+            <button id="btn2" onclick="java('2')">subtract</button>
+            <button id="btn3" onclick="java('3')">multiply</button>
+            <button id="btn4" onclick="java('4')">divide</button>
+        </p>
+        <h3><p id="answer"></p></h3></center>
+    
+</body>
+</html>
